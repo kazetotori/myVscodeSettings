@@ -1,0 +1,81 @@
+{
+	/*
+	 // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	//define a function
+	"function(){}": {
+		"prefix": "fn",
+		"body": "function$1($2){\r\n\t$3\r\n}$4"
+	},
+	//define a function and execute itself
+	"(function(){}())": {
+		"prefix": "fnself",
+		"body": "(function($1){\r\n\t$3\r\n}($2)$4"
+	},
+	//define a async function
+	"async function(){}":{
+		"prefix": "afn",
+		"body": "async function$1($2){\r\n\t$3\r\n}$4"
+	},
+	//define a async function and execute itself
+	"(async function(){}())":{
+		"prefix": "afnself",
+		"body": "(async function($1){\r\n\t$3\r\n}($2))$4"
+	},
+	//lambda
+	"()=>":{
+		"prefix": "lb",
+		"body": "($1)=>$2"
+	},
+	//define a lambda and execute itself
+	"(()=>somevalue)()":{
+		"prefix": "lbself",
+		"body": "(($1)=>$2)($3)$4"
+	},
+	//define an arrow function
+	"()=>{}":{
+		"prefix": "lfn",
+		"body": "($1)=>{\r\n\t$2\r\n}"
+	},
+	//define an arrow function and execute itself
+	"(()=>{}())":{
+		"prefix": "lfnself",
+		"body": "(($1)=>{\r\n\t$3\r\n}($2))$4"
+	},
+	//const
+	"const":{
+		"prefix": "cst",
+		"body": "const"
+	},
+	//JSON.stringify
+	"JSON.stringify":{
+		"prefix": "tojson",
+		"body": "JSON.stringify($1)$2"
+	},
+	//promise，the callback is a function
+	"new Promise(function(resolve,reject){})":{
+		"prefix": "pfn",
+		"body": "new Promise(function(resolve,reject){\r\n\t$2\r\n\t})$3"
+	},
+	//promise,the callback is a lambda
+	"new Promise((resolve,reject)=>somevalue)":{
+		"prefix": "plb",
+		"body": "new Promise((resolve,reject)=>$1)$2"
+	},
+	//promise,the callback is an arrow function
+	"new Promise((resolve,reject)=>{})":{
+		"prefix": "plfn",
+		"body": "new Promise((resolve,reject)=>{\r\n\t$1\r\n})$2"
+	}
+}

@@ -1,0 +1,30 @@
+[
+    //format code
+    {
+        "key": "ctrl+e ctrl+d",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+    },
+    //add one-line comment
+    {
+        "key": "ctrl+e ctrl+c",
+        "command": "editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    //remove one-line comment
+    {
+        "key": "ctrl+e ctrl+r",
+        "command": "editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    //open a new cmd
+    {
+        "key": "shift+c",
+        "command": "workbench.action.terminal.new"
+    },
+    //toggle the console
+    {
+        "key": "ctrl+q",
+        "command": "workbench.debug.action.toggleRepl"
+    }
+]
